@@ -1,6 +1,7 @@
 import Communityposts from "../../Components/Communityposts/Communityposts";
 import HomeBanner from "../../Components/HomeBanner/HomeBanner";
 import HomeProducts from "../../Components/HomeProducts/HomeProducts";
+import TotalWork from "../../Components/TotalWork/TotalWork";
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
             <HomeBanner></HomeBanner> 
             <HomeProducts></HomeProducts>
             <Communityposts></Communityposts>
+            <TotalWork></TotalWork>
         </div>
     );
 };

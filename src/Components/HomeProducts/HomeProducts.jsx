@@ -14,7 +14,7 @@ const HomeProducts = () => {
     }
     return (
         <div className=" space-y-20">
-            <h2 className=" text-center text-3xl font-semibold w-96 mx-auto">Select your product to find Related communities</h2>
+            <h2 className=" text-center text-3xl font-semibold lg:w-96 mx-auto">Select your product to find Related communities</h2>
             <div className=" grid md:grid-cols-3 lg:grid-cols-5 gap-5 ">
                 {
                     productData.slice(0, 5)?.map(product => <div key={product.id} className=" text-center space-y-3">

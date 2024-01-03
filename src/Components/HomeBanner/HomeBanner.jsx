@@ -2,7 +2,7 @@ import { FaSearch } from "react-icons/fa";
 
 const HomeBanner = () => {
     return (
-        <div className="  bg-purple-100  ">
+        <div className="   bg-gradient-to-r from-purple-200  to-sky-200 ">
             <div className="  flex justify-center items-center pt-20 px-5">
                 <div className=" space-y-5 text-center">
                     <h1 className=" text-5xl font-bold">Hello, what can we <span className=" text-purple-800">help you find?</span></h1>
