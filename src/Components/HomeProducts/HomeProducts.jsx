@@ -13,7 +13,7 @@ const HomeProducts = () => {
         setMoreCommunitis(!moreCommunitis)
     }
     return (
-        <div className=" space-y-20">
+        <div className=" space-y-20 p-5">
             <h2 className=" text-center text-3xl font-semibold lg:w-96 mx-auto">Select your product to find Related communities</h2>
             <div className=" grid md:grid-cols-3 lg:grid-cols-5 gap-5 ">
                 {
