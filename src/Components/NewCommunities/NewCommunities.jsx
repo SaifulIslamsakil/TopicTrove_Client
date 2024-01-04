@@ -20,15 +20,15 @@ const NewCommunities = () => {
                     </div>
                     <div className=" flex items-center justify-center p-5 border rounded-lg hover:border-t-8 hover:border-t-purple-600 hover:shadow-2xl duration-300 ">
                         <div className=" space-y-5 text-center">
-                            <img className=" mx-auto" src="https://i.ibb.co/Rpk5dQ8/com-1.png" alt="" />
-                            <p className=" text-2xl font-semibold">Find answers and ask new questions</p>
+                            <img className=" mx-auto" src="https://i.ibb.co/Cn9q37y/com-2-1.png" alt="" />
+                            <p className=" text-2xl font-semibold">Manage the people and discussions you follow</p>
                             <button className=" flex items-center mx-auto gap-2  hover:text-purple-600">How to Search Communities  <FaLongArrowAltRight /> </button>
                         </div>
                     </div>
                     <div className=" flex items-center justify-center p-5 border rounded-lg hover:border-t-8 hover:border-t-purple-600 hover:shadow-2xl duration-300 ">
                         <div className=" space-y-5 text-center">
-                            <img className=" mx-auto" src="https://i.ibb.co/Rpk5dQ8/com-1.png" alt="" />
-                            <p className=" text-2xl font-semibold">Find answers and ask new questions</p>
+                            <img className=" mx-auto" src="https://i.ibb.co/zbCpn25/com-3-1.png" alt="" />
+                            <p className=" text-2xl font-semibold">Award points, level up, and earn new privileges</p>
                             <button className=" flex items-center mx-auto gap-2  hover:text-purple-600">How to Search Communities  <FaLongArrowAltRight /> </button>
                         </div>
                     </div>

@@ -75,7 +75,7 @@ const NavBar = () => {
         </li>
     </>
     return (
-        <nav className=" bg-white shadow-xl relative  ">
+        <nav className=" bg-white relative  ">
             <div className="hidden lg:flex justify-between lg:p-5  items-center">
                 <div className=" flex-1  items-center flex">
                     <img className=" w-16" src="https://i.ibb.co/80KdXdY/005d61-42a961913b4f4bd9b6c250911c863a4a-mv2.png" alt="" />

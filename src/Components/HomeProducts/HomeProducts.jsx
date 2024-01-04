@@ -27,12 +27,12 @@ const HomeProducts = () => {
                 }
 
             </div>
-            <div onClick={handleMoreCommunitis} className=" border-y border-purple-500 p-5">
+            <div onClick={handleMoreCommunitis} className=" border-t border-purple-500 p-5">
                 <h2 className=" text-center text-2xl font-semibold text-purple-600">More Communitis {moreCommunitis ? <span>-</span>:<span>+</span>}</h2>
             </div>
             <div className={`grid md:grid-cols-3 lg:grid-cols-5 gap-5 ${moreCommunitis ? "block": "hidden"}` }>
                 {
-                    productData.slice(5)?.map(product => <div key={product.id} className=" text-center space-y-3">
+                    productData.map(product => <div key={product.id} className=" text-center space-y-3">
                         <div className=" shadow-2xl shadow-purple-300 p-5 h-40 w-40 mx-auto ">
                             <img className=" h-full w-full" src={product.img} alt="" />
                         </div>

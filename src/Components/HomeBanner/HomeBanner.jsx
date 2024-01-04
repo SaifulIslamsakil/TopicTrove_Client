@@ -2,14 +2,14 @@ import { FaSearch } from "react-icons/fa";
 
 const HomeBanner = () => {
     return (
-        <div className="   bg-gradient-to-r from-purple-200  to-sky-200 ">
+        <div className="   bg-gradient-to-r from-purple-200  to-sky-100 ">
             <div className="  flex justify-center items-center pt-20 px-5">
                 <div className=" space-y-5 text-center">
                     <h1 className=" text-5xl font-bold">Hello, what can we <span className=" text-purple-800">help you find?</span></h1>
                     <p className=" text-xl">Find answers, ask questions, and connect with our community of Docly users from around the world.</p>
                     <div className=" md:w-4/5 h-14 bg-white rounded-full mx-auto flex items-center ">
                         <input className=" h-full w-full rounded-full border-none outline-none p-5" placeholder="Search For Topice...." type="search" name="" id="" />
-                        <span className=" text-2xl m-3"><FaSearch /></span>
+                        <span className=" text-2xl m-3 text-purple-600"><FaSearch /></span>
                     </div>
                     <div className=" flex gap-4 mx-auto md:w-1/2 ">
                         <p className=" font-semibold">Popular : </p>
