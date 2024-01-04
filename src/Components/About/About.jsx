@@ -11,7 +11,7 @@ const About = () => {
                 <p className=" font-semibold">CEO, KbDoc</p>
                 <img src="https://i.ibb.co/wK7FNbg/quote-bottom.png" alt="" />
             </div>
-            <div className=" bg-gradient-to-r from-purple-200 lg:w-[500px]  to-red-100  rounded-full">
+            <div className=" bg-gradient-to-r from-purple-200 to-red-100 lg:w-[500px]  rounded-full">
                 <img src="https://i.ibb.co/dDst1bQ/journalism-1.png" alt="" />
             </div>
         </div>
