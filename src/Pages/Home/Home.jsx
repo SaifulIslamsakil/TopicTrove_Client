@@ -1,3 +1,4 @@
+import About from "../../Components/About/About";
 import Communityposts from "../../Components/Communityposts/Communityposts";
 import HomeBanner from "../../Components/HomeBanner/HomeBanner";
 import HomeProducts from "../../Components/HomeProducts/HomeProducts";
@@ -13,6 +14,7 @@ const Home = () => {
             <Communityposts></Communityposts>
             <TotalWork></TotalWork>
             <NewCommunities></NewCommunities>
+            <About></About>
         </div>
     );
 };
