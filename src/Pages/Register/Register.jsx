@@ -1,14 +1,30 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { HiOutlineMail } from "react-icons/hi";
 import { useForm } from "react-hook-form";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/Provider";
 const Register = () => {
+    const { Register } = useContext(AuthContext)
+    const navigate = useNavigate()
     const {
         register,
+        reset,
         handleSubmit,
         formState: { errors },
     } = useForm()
     const handelFormSubmited = (data) => {
-        console.log(data)
+      
+        Register(data.email, data.password)
+            .then(res => {
+                if(res.email){
+                    navigate('/')
+                    reset()
+                }
+               
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
     return (
         <div className=" md:flex ">
@@ -60,7 +76,7 @@ const Register = () => {
                                     <input {...register("password", { required: true, maxLength: 20, minLength: 8, pattern: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/ })} type="Password" placeholder=" Enter Password" className="input input-bordered w-full " />
                                     {errors.password?.type === "required" && <span className=" text-red-500">password is required</span>}
                                     {errors.password?.type === "minLength" && <span className=" text-red-500">your Password must be 6 chareter</span>}
-                                    {errors.password?.type === "pattern" && <span className=" text-red-500">your Password must be an number an uppercase an lowercase an spcial careater</span>} 
+                                    {errors.password?.type === "pattern" && <span className=" text-red-500">your Password must be an number an uppercase an lowercase an spcial careater</span>}
                                 </label>
                             </div>
                         </div>

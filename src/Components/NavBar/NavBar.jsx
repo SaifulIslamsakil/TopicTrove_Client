@@ -2,14 +2,16 @@ import { NavLink } from "react-router-dom";
 import { IoIosNotifications } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import { MdSwitchAccount } from "react-icons/md";
+import { AuthContext } from "../../Provider/Provider";
 const NavBar = () => {
     const [menuDower, setMenuDower] = useState(false)
     const [imgDropDown, setImgDropDown] = useState(false)
+    const {LogOut} = useContext(AuthContext)
     const handleOpenMenuDower = () => {
         setMenuDower(true)
     }
@@ -18,6 +20,16 @@ const NavBar = () => {
     }
     const handelImgDropDown = ()=>{
         setImgDropDown(!imgDropDown)
+    }
+    const handelLogout = ()=>{
+        LogOut()
+        .then(res=>{
+            console.log(res)
+            setImgDropDown(false)
+        })
+        .catch(err =>{
+            console.log(err)
+        })
     }
     const menu = <>
         <li>
@@ -123,7 +135,7 @@ const NavBar = () => {
                 <div className=" space-y-5 border-b-2 border-purple-300 pb-4">
                     <p className=" flex gap-3 text-xl items-center "> <FaHome /> <span className="hover:text-purple-600 hover:underline"> Dashboard</span></p>
                     <p className=" flex gap-3 text-xl items-center "> <CgProfile />  <span className="hover:text-purple-600 hover:underline"> My Profile</span> </p>
-                    <p className=" flex gap-3 text-xl items-center "> <FiLogOut /> <span className="hover:text-purple-600 hover:underline"> Logout</span> </p>
+                    <p onClick={handelLogout} className=" flex gap-3 text-xl items-center "> <FiLogOut /> <span className="hover:text-purple-600 hover:underline"> Logout</span> </p>
                 </div>
                 <p className=" flex gap-3 text-xl items-center "><MdSwitchAccount /> <span className="hover:text-purple-600 hover:underline"> Add Another Account</span></p>
             </div>

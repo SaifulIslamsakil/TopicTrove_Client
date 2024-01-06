@@ -1,9 +1,15 @@
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { HiOutlineMail } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Provider/Provider";
 
 
 const SignIn = () => {
+    const location = useLocation()
+    const navigate = useNavigate()
+    const { Signin} = useContext(AuthContext)
+    console.log(location)
     const {
         register,
         handleSubmit,
@@ -11,6 +17,14 @@ const SignIn = () => {
     } = useForm()
     const handelFormSubmited = (data) => {
         console.log(data)
+        Signin(data.email, data.password)
+        .then(res=>{
+            console.log(res)
+            location.state? navigate(location.state) : navigate("/")
+        })
+        .catch(err =>{
+            console.log(err)
+        })
     }
     return (
         <div className=" md:flex ">
@@ -28,7 +42,7 @@ const SignIn = () => {
 
                     <form action="" onSubmit={handleSubmit(handelFormSubmited)}>
                         <div className=" grid md:grid-cols-2 gap-5">
-                            
+
                             <div className=" col-span-2">
                                 <label className="form-control w-full">
                                     <div className="label">
