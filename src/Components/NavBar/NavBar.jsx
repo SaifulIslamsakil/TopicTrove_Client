@@ -65,7 +65,7 @@ const NavBar = () => {
         </li>
         <li>
             <NavLink
-                to="/Join-US "
+                to="/Register "
                 className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : " border-2 bg-purple-50 border-purple-600 p-2 rounded-lg hover:bg-purple-600 hover:text-white hover:duration-300"
                 }
