@@ -16,14 +16,13 @@ const Register = () => {
       
         Register(data.email, data.password)
             .then(res => {
-                if(res.email){
+
                     navigate('/')
                     reset()
-                }
                
             })
             .catch(err => {
-                console.log(err)
+                
             })
     }
     return (

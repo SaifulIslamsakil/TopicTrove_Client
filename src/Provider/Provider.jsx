@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import Auth from "../../Firbase/Firbase-confiqe";
-import { set } from "react-hook-form";
 export const AuthContext = createContext(null)
 const Provider = ({children}) => {
     const [user, setUser] = useState('')
@@ -17,7 +16,7 @@ const Provider = ({children}) => {
     }
     const LogOut = ()=>{
         setLodding(true)
-        return(Auth)
+        return signOut(Auth)
     }
     const GoogelRegister = ()=>{
         setLodding(true)
@@ -32,7 +31,7 @@ const Provider = ({children}) => {
             return unSubcriber
         }
     },[])
-    console.log(user)
+
     const AuthInfo = {
         Register,
         Signin,

@@ -19,11 +19,11 @@ const SignIn = () => {
         console.log(data)
         Signin(data.email, data.password)
         .then(res=>{
-            console.log(res)
+        
             location.state? navigate(location.state) : navigate("/")
         })
         .catch(err =>{
-            console.log(err)
+         
         })
     }
     return (
